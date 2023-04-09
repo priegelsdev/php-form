@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Upload</title>
-</head>
-
-<body>
-  <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" enctype="multipart/form-data" style="display:flex; flex-direction:column; gap:0.5rem">
-    Select image to Upload
-    <input type="file" name="upload">
-    <input type="submit" value="Submit" name="submit" style="width:100px">
+<?php include 'inc/header.php'; ?>
+<div>
+  <h2>Feedback</h2>
+  <form action="">
+    <div>
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" placeholder="Enter your name">
+    </div>
+    <div>
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" placeholder="Enter your email">
+    </div>
+    <div>
+      <label for="body" class="form-label">Feedback</label>
+      <textarea class="form-control" name="body" placeholder="Enter your feedback"></textarea>
+    </div>
+    <div>
+      <input type="submit" name="submit" value="Submit">
+    </div>
   </form>
+</div>
+</main>
 </body>
 
 </html>
